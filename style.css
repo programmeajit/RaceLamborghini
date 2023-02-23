@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding:0;
+    border: box;
+   /*  overflow-y: hidden; */
+    /* overflow-x: hidden; */
+}
+body{
+    animation: shakebody linear 10s infinite;
+    overflow: hidden;
+    
+}
+
+
+#sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/background.jpg) ;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    
+}
+#trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -107px;
+}
+#track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(images/track.png);
+    
+    position: absolute;
+    top:70vh;
+    animation: carmove linear 10s infinite;
+    
+
+}
+#car{
+    width: 330px;
+    height: 100px;
+    background-image: url(images/car_body.png);
+    background-size: cover;
+    position: absolute;
+    bottom:28vh;
+    left: 20vw;
+    animation:   shake linear 3s infinite;
+    /* animation: move linear 10s infinite; */
+}
+
+.leftWheel img{
+    width: 67px;
+    position: relative;
+    top: 37px;
+    left: 41px;
+    animation: wheelrotation linear .6s infinite;
+}
+.rightWheel img{
+    width: 67px;
+    position: relative;
+    top: -35px;
+    left: 219px;
+    animation: wheelrotation linear .6s infinite;
+}
+
+@keyframes wheelrotation {
+
+    100%{
+        transform: rotate(360deg);
+    }  
+}
+
+
+@keyframes carmove {
+
+    100%{
+        transform: translateX(-500vw);
+    }  
+}
+
+
+@keyframes move {
+
+    0%{
+        transform: translateX(-50vh);
+    }
+
+    100%{
+        transform: translateX(150vh);
+    }    
+}
+
+@keyframes shake {
+
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }    
+}
+
+@keyframes shakebody {
+
+    0%{
+        transform: translateY(-30px);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(-30px);
+    }    
+}
+
+
+
+
+
